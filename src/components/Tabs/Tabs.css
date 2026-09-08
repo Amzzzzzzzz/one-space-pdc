@@ -1,0 +1,174 @@
+.tabsSection{
+
+    text-align:center;
+
+    background:white;
+}
+
+.tabsSection h2{
+
+    font-size:42px;
+
+    margin-bottom:40px;
+}
+
+.tabButtons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-bottom:40px;
+}
+
+.tabButtons button{
+
+    padding:14px 28px;
+
+    border:none;
+
+    background:#EFEFEF;
+
+    border-radius:50px;
+
+    font-size:16px;
+}
+
+.tabButtons button.active{
+
+    background:#17324D;
+
+    color:white;
+}
+
+.tabContent{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:#FAFAFA;
+
+    padding:50px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.tabContent p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    white-space:pre-line;
+}
+
+.serviceGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+    margin-top:20px;
+}
+
+.serviceCard{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    transition:.3s;
+}
+
+.serviceCard:hover{
+
+    transform:translateY(-8px);
+}
+
+.serviceCard h3{
+
+    margin-bottom:15px;
+
+    color:#17324D;
+}
+
+.serviceCard span{
+
+    color:#C7A86B;
+
+    font-weight:700;
+
+    font-size:18px;
+}
+
+.serviceDescription{
+
+    margin:18px 0;
+
+    line-height:1.7;
+
+    color:#666;
+}
+
+.includesList{
+
+    list-style:none;
+
+    margin:20px 0;
+
+    text-align:left;
+}
+
+.includesList li{
+
+    margin:8px 0;
+
+    color:#17324D;
+}
+
+@media (max-width:768px){
+
+.tabsSection{
+
+    padding:70px 20px;
+
+}
+
+.tabButtons{
+
+    gap:10px;
+
+}
+
+.tabButtons button{
+
+    width:100%;
+
+}
+
+.tabContent{
+
+    padding:30px;
+
+}
+
+.serviceGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
