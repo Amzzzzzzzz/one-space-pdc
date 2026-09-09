@@ -83,7 +83,8 @@
 }
 
 .contactForm input,
-.contactForm textarea{
+.contactForm textarea,
+.contactForm select{
 
     padding:16px;
 

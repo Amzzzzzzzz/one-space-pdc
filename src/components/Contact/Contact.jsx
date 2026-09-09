@@ -1,7 +1,71 @@
+import { useState } from "react";
 import "./Contact.css";
+import { supabase } from "../../lib/supabase";
 
 function Contact() {
+
+
+  const [form, setForm] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  company: "",
+  service: "",
+  message: "",
+});
+
+const [loading, setLoading] = useState(false);
+
+const handleChange = (e) => {
+  setForm({
+    ...form,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  setLoading(true);
+
+const { error } = await supabase
+  .from("enquiries")
+  .insert([form]);
+
+if (error) {
+  setLoading(false);
+  alert(error.message);
+  return;
+}
+
+
+const { error: emailError } = await supabase.functions.invoke(
+  "send-enquiry-email",
+  {
+    body: form,
+  }
+);
+
+if (emailError) {
+  console.error("Email Error:", emailError);
+}
+
+setLoading(false);
+
+alert("Thank you! Your enquiry has been sent.");
+
+setForm({
+  name: "",
+  email: "",
+  phone: "",
+  company: "",
+  service: "",
+  message: "",
+});
+
+};
   return (
+
     <section id="contact" className="contact">
 
       <h2>Let's Discuss Your Next Project</h2>
@@ -40,31 +104,93 @@ function Contact() {
 
         </div>
 
-        <form className="contactForm">
+        <form
+  className="contactForm"
+  onSubmit={handleSubmit}
+>
 
-          <input
-            type="text"
-            placeholder="Your Name"
-          />
+<input
+  type="text"
+  name="name"
+  placeholder="Your Name"
+  value={form.name}
+  onChange={handleChange}
+  required
+/>
 
-          <input
-            type="email"
-            placeholder="Email Address"
-          />
+<input
+  type="email"
+  name="email"
+  placeholder="Email Address"
+  value={form.email}
+  onChange={handleChange}
+  required
+/>
 
-          <input
-            type="text"
-            placeholder="Company (Optional)"
-          />
+<input
+  type="tel"
+  name="phone"
+  placeholder="Phone Number"
+  value={form.phone}
+  onChange={handleChange}
+/>
 
-          <textarea
-            rows="6"
-            placeholder="Tell us about your project..."
-          />
+<input
+  type="text"
+  name="company"
+  placeholder="Company (Optional)"
+  value={form.company}
+  onChange={handleChange}
+/>
 
-          <button type="submit">
-            Send Enquiry
-          </button>
+<select
+  name="service"
+  value={form.service}
+  onChange={handleChange}
+  required
+>
+
+  <option value="">
+    Select a Service
+  </option>
+
+  <option value="Space Audit">
+    Space Audit
+  </option>
+
+  <option value="Space Planning & Design">
+    Space Planning & Design
+  </option>
+
+  <option value="Master Planning">
+    Master Planning
+  </option>
+
+  <option value="Consultation">
+    Consultation
+  </option>
+
+</select>
+
+<textarea
+  rows="6"
+  name="message"
+  placeholder="Tell us about your project..."
+  value={form.message}
+  onChange={handleChange}
+  required
+/>
+
+<button
+  type="submit"
+  disabled={loading}
+>
+
+  {loading
+    ? "Sending..."
+    : "Send Enquiry"}
+
+</button>
 
         </form>
 
