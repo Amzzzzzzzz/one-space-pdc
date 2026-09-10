@@ -34,31 +34,33 @@ function Tabs({ id, title, data }) {
 
               <div className="serviceCard" key={service.name}>
 
-<h3>{service.name}</h3>
+<div className="cardTitle">
+    <h3>{service.name}</h3>
+</div>
 
-{service.description && (
-    <p className="serviceDescription">
-        {service.description}
-    </p>
-)}
+<div className="cardBody">
 
-{service.includes && (
+    {service.description && (
+        <p className="serviceDescription">
+            {service.description}
+        </p>
+    )}
 
-    <ul className="includesList">
+    {service.includes && (
+        <ul className="includesList">
+            {service.includes.map((item) => (
+                <li key={item}>
+                    ✓ {item}
+                </li>
+            ))}
+        </ul>
+    )}
 
-        {service.includes.map((item) => (
+</div>
 
-            <li key={item}>
-                ✓ {item}
-            </li>
-
-        ))}
-
-    </ul>
-
-)}
-
-<span>{service.price}</span>
+<div className="cardPrice">
+    <span>{service.price}</span>
+</div>
 
               </div>
 
