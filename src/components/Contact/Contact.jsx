@@ -52,7 +52,7 @@ if (emailError) {
 
 setLoading(false);
 
-alert("Thank you! Your enquiry has been sent.");
+alert("Thank you! Your inquiry has been sent.");
 
 setForm({
   name: "",
@@ -188,7 +188,7 @@ setForm({
 
   {loading
     ? "Sending..."
-    : "Send Enquiry"}
+    : "Send Inquiry"}
 
 </button>
 
