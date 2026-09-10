@@ -26,10 +26,10 @@ export default {
   
           to: ["ameerarashid04@gmail.com"],
 
-          subject: `New Website Enquiry - ${service}`,
+          subject: `New Website Inquiry - ${service}`,
 
           html: `
-            <h2>New Website Enquiry</h2>
+            <h2>New Website Inquiry</h2>
 
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
