@@ -75,22 +75,21 @@
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:20px;
+    gap:18px;
 
-    margin-top:20px;
+    align-items:stretch;
+
 }
 
 .serviceCard{
 
     background:white;
 
-    padding:25px 20px;
-
     border-radius:18px;
 
     box-shadow:0 10px 25px rgba(0,0,0,.06);
 
-    transition:.3s;
+    padding:20px;
 
     display:flex;
 
@@ -98,7 +97,7 @@
 
     justify-content:space-between;
 
-    min-height:190px;
+    height:100%;
 
 }
 
