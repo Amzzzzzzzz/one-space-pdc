@@ -24,7 +24,7 @@ export default {
           from: "One Space PDC <onboarding@resend.dev>",
 
   
-          to: ["ameerarashid04@gmail.com"],
+          to: ["OneSpacePDC@yahoo.com"],
 
           subject: `New Website Inquiry - ${service}`,
 
