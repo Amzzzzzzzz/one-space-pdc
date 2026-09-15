@@ -10,7 +10,7 @@ export const aboutData = [
     id: "mission",
     title: "Mission",
     content:
-      "To help organisations maximise the value of their physical environments through thoughtful planning, intelligent design and strategic consulting.",
+      "To help organizations maximize the value of their physical environments through thoughtful planning, intelligent design and strategic consulting.",
   },
 
   {
@@ -36,7 +36,7 @@ export const aboutData = [
     id: "philosophy",
     title: "Philosophy",
     content:
-      "Space is one of an organisation's most valuable assets. Every room, corridor and workstation should contribute to the organisation's mission.",
+      "Space is one of an organization's most valuable assets. Every room, corridor and workstation should contribute to the organization's mission.",
   },
 
   {
@@ -54,7 +54,7 @@ export const servicesData = [
 
     content: [
       {
-        name: "Space Utilisation Verification",
+        name: "Space Utilization Verification",
         price: "$0.30/sf",
       },
       {
@@ -197,7 +197,7 @@ export const packagesData = [
         name: "Essential Audit Package",
 
         description:
-          "Ideal for organisations that need accurate drawings and measurements of their existing space.",
+          "Ideal for organizations that need accurate drawings and measurements of their existing space.",
 
         price: "$0.55/sf",
 
@@ -212,12 +212,12 @@ export const packagesData = [
         name: "Complete Space Audit Package",
 
         description:
-          "A complete verification of your facility including storage and utilisation analysis.",
+          "A complete verification of your facility including storage and utilization analysis.",
 
         price: "$1.50/sf",
 
         includes: [
-          "Space Utilisation Verification",
+          "Space Utilization Verification",
           "Floor Plan Verification",
           "Square Footage Verification",
           "Measurement Verification",
@@ -276,7 +276,7 @@ export const packagesData = [
         name: "Strategic Growth Package",
 
         description:
-          "Supports organisations planning future expansion and storage needs.",
+          "Supports organizations planning future expansion and storage needs.",
 
         price: "$1.50/sf",
 
@@ -355,7 +355,7 @@ export const experienceData = [
   {
     title: "Clinics",
     description:
-      "Functional layouts that maximise staff workflow and patient experience.",
+      "Functional layouts that maximize staff workflow and patient experience.",
   },
 
   {
@@ -391,7 +391,7 @@ export const experienceData = [
   {
     title: "Grocery Stores",
     description:
-      "Optimised layouts to improve customer movement and product accessibility.",
+      "Optimized layouts to improve customer movement and product accessibility.",
   },
 
   {
